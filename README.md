@@ -11,9 +11,9 @@ The physics of thrust-to-altitude is naturally unstable. Without active control,
 
 | Controller | Result | Observation |
 | :--- | :--- | :--- |
-| **P-Only** | ❌ **FAILED** | [cite_start]System oscillated wildly (unstable). |
-| **PD** | ⚠️ **Stable but Inaccurate** | [cite_start]Stopped oscillating, but stuck at 7m (Steady-State Error). |
-| **PID** | ✅ **SUCCESS** | [cite_start]Perfect hover at 10m with zero error. |
+| **P-Only** | ❌ **FAILED** | System oscillated wildly (unstable). |
+| **PD** | ⚠️ **Stable but Inaccurate** | Stopped oscillating, but stuck at 7m (Steady-State Error). |
+| **PID** | ✅ **SUCCESS** | Perfect hover at 10m with zero error. |
 
 ## 📸 System Architecture
 *The Simulink model includes the Drone Physics ($1/s^2$), Gravity Disturbance ($9.81N$), and the Feedback Loop.*
@@ -30,5 +30,5 @@ The physics of thrust-to-altitude is naturally unstable. Without active control,
 ![Stable Result](pid_controller_success.png)
 
 ## 🚀 Key Takeaways
-- [cite_start]**Integral Action (I)** is essential for "Gravity Compensation" to eliminate the gap between 7m and 10m[cite: 158].
-- [cite_start]**Derivative Action (D)** acts as an electronic "brake" to stop oscillations[cite: 156].
+- **Integral Action (I)** is essential for "Gravity Compensation" to eliminate the gap between 7m and 10m.
+- **Derivative Action (D)** acts as an electronic "brake" to stop oscillations.
